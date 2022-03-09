@@ -1,0 +1,6 @@
+grpc/*
+
+openapi/client/*
+openapi/server/*
+
+!.gitkeep
