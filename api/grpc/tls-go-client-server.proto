@@ -1,0 +1,28 @@
+// protoのバージョン
+syntax = "proto3";
+
+// パッケージ名
+package hello;
+
+// コードが自動生成されるディレクトリ
+option go_package = "proto/";
+
+// APIにおけるサービスを定義
+service RockPaperScissorsService {
+  // こんにちは
+  rpc Hello (HelloRequest) returns (HelloResponse) {}
+}
+
+// 型にはスカラー型とメッセージ型の２つがあります。
+// スカラー型は数値、文字列、真偽値などがあり、メッセージ型は複数のフィールドを持つことができます。
+
+// こんにちはのリクエストメッセージ
+message HelloRequest {
+    string name = 1;
+}
+
+// こんにちはのレスポンスメッセージ
+message HelloResponse {
+    string name = 1;
+    string received_date = 2;
+}
