@@ -1,0 +1,10 @@
+# versionは3系が最新版で、versionによって書き方が異なる
+version: "3"
+services:
+  grpc-proto-generater:
+    build: .
+    image: grpc-proto-generater
+    container_name: grpc-proto-generater
+    tty: true
+    volumes:
+      - ./proto:/usr/local/grpc/proto
